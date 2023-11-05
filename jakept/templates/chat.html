@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} Chat {% endblock %}
+
+{% block content %}
+  <div id="msg-container">
+    {% for msg in messages %}
+      <p>{{ msg.author }}: {{ msg.content }}</p>  
+    {% endfor %}
+  </div>
+  <input type="text" placeholder="Message" required>
+{% endblock %}
