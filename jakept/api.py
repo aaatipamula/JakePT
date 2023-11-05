@@ -26,8 +26,10 @@ def get_containers():
             return jsonify({'error':'category does not exist in database'}),404
         else:
             category_opt = database.get(item) #pulls the dict associated to that category key 
-            price_cat = category_opt.get(budget)
-            out = [price_cat['avail_policies'],category_opt['claims'],category_opt['policies']]
+            prices_cat = category_opt.get("prices")#pulls the dict that carries all the price category keys
+            prices_keys = prices_cat.split()
+            budget_range = min(prices_keys,key=lambda x: abs(x-budget))
+            out = [category_opt[str(budget_range)],category_opt['claims'],category_opt['policies']]
             guhpuht.append(out)
     return jsonify(guhpuht)
 

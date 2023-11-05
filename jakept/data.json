@@ -1,11 +1,150 @@
 {
 
 "HVAC-contractors":{
-    "policies":["balls"], 
-    "stats":["jaws"]
+    "policies":["business personal property","building property","business liability","completed operations","mobile equipment","installation floater","property of others","commercial auto","commercial liability umbrella policy","workers compensation","surety bonds"],
+    "claims":{"business personal property":1500,"building property":2000, "business liability":500, "workers comp":10000},
+    "prices":[50,100,150,200,300,400],
+    "50":[], 
+    "100": [],
+    "150": ["business personal property","building property"],
+    "200": ["business personal property","building property","business liability"],
+    "300": ["business personal property","building property", "business liability","commercial auto"],
+    "400": ["business personal property","building property", "business liability","commercial auto","workers compensation"]
+
 },
 "Fencing-contractors":{
-    "policies":[]
+    "policies":["business personal property","building property","business liability","completed operations","mobile equipment","installation floater","property of others","commercial auto","commercial liability umbrella policy","workers compensation","surety bonds"],
+    "claims":{"business personal property":1500,"building property":2000, "business liability":500, "workers comp":10000},
+
+    "prices":[50,100,150,200,300,400],
+    "50":[], 
+    "100": [],
+    "150": ["business personal property","building property"],
+    "200": ["business personal property","building property","business liability"],
+    "300": ["business personal property","building property", "business liability","commercial auto"],
+    "400": ["business personal property","building property", "business liability","commercial auto","workers compensation"]
+},
+"Builders-risk":{
+    "policies":["business personal property","building property","business liability","completed operations","mobile equipment","installation floater","property of others","commercial auto","commercial liability umbrella policy","workers compensation","surety bonds"],
+    "claims":{"business personal property":1500,"building property":2000, "business liability":500, "workers comp":10000},
+
+
+    "prices":[50,100,150,200,300,400],
+    "50":[], 
+    "100": [],
+    "150": ["business personal property","building property"],
+    "200": ["business personal property","building property","business liability"],
+    "300": ["business personal property","building property", "business liability","commercial auto"],
+    "400": ["business personal property","building property", "business liability","commercial auto","workers compensation"]
+},
+"Carpentry":{
+    "policies":["business personal property","building property","business liability","completed operations","mobile equipment","installation floater","property of others","commercial auto","commercial liability umbrella policy","workers compensation","surety bonds"],
+    "claims":{"business personal property":1500,"building property":2000, "business liability":500, "workers comp":10000},
+
+    
+    "prices":[50,100,150,200,300,400],
+    "50":[], 
+    "100": [],
+    "150": ["business personal property","building property"],
+    "200": ["business personal property","building property","business liability"],
+    "300": ["business personal property","building property", "business liability","commercial auto"],
+    "400": ["business personal property","building property", "business liability","commercial auto","workers compensation"]
+
+},
+"Electrical-work":{
+    "policies":["business personal property","building property","business liability","completed operations","mobile equipment","installation floater","property of others","commercial auto","commercial liability umbrella policy","workers compensation","surety bonds"],
+    "claims":{"business personal property":1500,"building property":2000, "business liability":500, "workers comp":10000},
+
+
+    
+    "prices":[50,100,150,200,300,400],
+    "50":[], 
+    "100": [],
+    "150": ["business personal property","building property"],
+    "200": ["business personal property","building property","business liability"],
+    "300": ["business personal property","building property", "business liability","commercial auto"],
+    "400": ["business personal property","building property", "business liability","commercial auto","workers compensation"]
+},
+"Gutter-installation":{
+    "policies":["business personal property","building property","business liability","completed operations","mobile equipment","installation floater","property of others","commercial auto","commercial liability umbrella policy","workers compensation","surety bonds"],
+    "claims":{"business personal property":1500,"building property":2000, "business liability":500, "workers comp":10000},
+
+    
+    "prices":[50,100,150,200,300,400],
+    "50":[], 
+    "100": [],
+    "150": ["business personal property","building property"],
+    "200": ["business personal property","building property","business liability"],
+    "300": ["business personal property","building property", "business liability","commercial auto"],
+    "400": ["business personal property","building property", "business liability","commercial auto","workers compensation"]
+},
+"Insulation-work":{
+    "policies":["business personal property","building property","business liability","completed operations","mobile equipment","installation floater","property of others","commercial auto","commercial liability umbrella policy","workers compensation","surety bonds"],
+    "claims":{"business personal property":1500,"building property":2000, "business liability":500, "workers comp":10000},
+
+
+    
+    "prices":[50,100,150,200,300,400],
+    "50":[], 
+    "100": [],
+    "150": ["business personal property","building property"],
+    "200": ["business personal property","building property","business liability"],
+    "300": ["business personal property","building property", "business liability","commercial auto"],
+    "400": ["business personal property","building property", "business liability","commercial auto","workers compensation"]
+},
+"Painting-contractor":{
+    "policies":["business personal property","building property","business liability","completed operations","mobile equipment","installation floater","property of others","commercial auto","commercial liability umbrella policy","workers compensation","surety bonds"],
+    "claims":{"business personal property":1500,"building property":2000, "business liability":500, "workers comp":10000},
+
+
+    
+    "prices":[50,100,150,200,300,400],
+    "50":[], 
+    "100": [],
+    "150": ["business personal property","building property"],
+    "200": ["business personal property","building property","business liability"],
+    "300": ["business personal property","building property", "business liability","commercial auto"],
+    "400": ["business personal property","building property", "business liability","commercial auto","workers compensation"]
+},
+"Plumbing":{
+    "policies":["business personal property","building property","business liability","completed operations","mobile equipment","installation floater","property of others","commercial auto","commercial liability umbrella policy","workers compensation","surety bonds"],
+    "claims":{"business personal property":1500,"building property":2000, "business liability":500, "workers comp":10000},
+
+    
+    "prices":[50,100,150,200,300,400],
+    "50":[], 
+    "100": [],
+    "150": ["business personal property","building property"],
+    "200": ["business personal property","building property","business liability"],
+    "300": ["business personal property","building property", "business liability","commercial auto"],
+    "400": ["business personal property","building property", "business liability","commercial auto","workers compensation"]
+},
+"Refrigeration-systems":{
+    "policies":["business personal property","building property","business liability","completed operations","mobile equipment","installation floater","property of others","commercial auto","commercial liability umbrella policy","workers compensation","surety bonds"],
+    "claims":{"business personal property":1500,"building property":2000, "business liability":500, "workers comp":10000},
+
+    
+    "prices":[50,100,150,200,300,400],
+    "50":[], 
+    "100": [],
+    "150": ["business personal property","building property"],
+    "200": ["business personal property","building property","business liability"],
+    "300": ["business personal property","building property", "business liability","commercial auto"],
+    "400": ["business personal property","building property", "business liability","commercial auto","workers compensation"]
+
+},
+"Interior-construction":{
+    "policies":["business personal property","building property","business liability","completed operations","mobile equipment","installation floater","property of others","commercial auto","commercial liability umbrella policy","workers compensation","surety bonds"],
+    "claims":{"business personal property":1500,"building property":2000, "business liability":500, "workers comp":10000},
+
+    
+    "prices":[50,100,150,200,300,400],
+    "50":[], 
+    "100": [],
+    "150": ["business personal property","building property"],
+    "200": ["business personal property","building property","business liability"],
+    "300": ["business personal property","building property", "business liability","commercial auto"],
+    "400": ["business personal property","building property", "business liability","commercial auto","workers compensation"] 
 }
 
 }
