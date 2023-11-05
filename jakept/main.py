@@ -6,7 +6,6 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask('JakePT')
 
 from ai import create_chain
-from langchain.schema import messages_to_dict
 import api
 
 def valid_currency(string: str) -> bool:
@@ -26,18 +25,28 @@ def homepage():
     if budget and not valid_currency(budget):
         return render_template('info.html', error=True)
 
+    return redirect(url_for("jake") + "?name=" + name + "&budget=" + budget)
 
-    return redirect(url_for("chat") + "?name=" + name + "&budget=" + budget)
+@app.get('/JakePT')
+def jake():
+    name = request.args.get('name')
+    budget = request.args.get('budget')
+    return render_template('chat.html', name=name, budget=budget)
 
 @app.get('/chat')
 def chat():
     name = request.args.get('name')
     budget = request.args.get('budget')
     question = request.args.get('question')
-    if not(name and budget):
-        return redirect(url_for('homepage'))
-    url = url_for('info_placeholder') + '?categories'
-    chat = create_chain(url, request.args, ['hi'])
-    response = chat.invoke({"question": question})
+
+    if not(name and budget and question):
+        return "No name, budget or question found"
+    url = url_for('get_containers')
+    chat = create_chain()
+    response = chat.invoke({
+        "question": question,
+        "customer_info": f"Name: {name}; Budget: {budget}",
+        "url": url
+    })
     return response.content
     
