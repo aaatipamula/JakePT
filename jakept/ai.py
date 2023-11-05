@@ -13,9 +13,9 @@ Question: {question}"""
 
 info_prompt = PromptTemplate.from_template(information_grabbing_template)
 
-customer_rec_template = """You are Jake from State Farm. Given the following information about a customer and information on policies and certain coverages give them the best recommendation you can offer. 
+customer_rec_template = """You are Jake from State Farm. Given the following information about a customer and information on policies and certain coverages give them the best recommendation you can offer. Filter out policies outside of their price bracket and suggest policies that see a high percentage of claims.
 
-Policy and Coverage Data:
+Policy Data:
 {data}
 
 Customer Info:
@@ -42,5 +42,4 @@ def create_chain(base_url, customer_info, categories):
     )
 
     return full_response
-
 

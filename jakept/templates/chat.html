@@ -3,10 +3,31 @@
 {% block title %} Chat {% endblock %}
 
 {% block content %}
+  <script type="text/javascript">
+    function updateChat(author, message) {
+      var messages = document.getElementById('msg-container');
+      messages.innerHTML += '<p>' + author + ': ' + message + '</p>';
+    }
+
+    async function getResponse(question) {
+      let res = await fetch('/chat?name={{ name }}&budget={{ budget }}&question=' + question);
+      let data = await res.text();
+      return data;
+    }
+
+    async function onSubmit() {
+      var question = document.getElementById('chat-question').value;
+      updateChat('Me', question);
+      var response = await getResponse(question);
+      updateChat('JakePT', response);
+      input = document.getElementById('chat-submit').value = ''
+    }
+    
+  </script>
   <div id="msg-container">
-    {% for msg in messages %}
-      <p>{{ msg.author }}: {{ msg.content }}</p>  
-    {% endfor %}
   </div>
-  <input type="text" placeholder="Message" required>
+  <form id=chat-form onsubmit="onSubmit();return false">
+    <input id="chat-question" type="text" name="question">
+    <input id="chat-sumbit" type="submit" value="Submit">
+  </form>
 {% endblock %}
