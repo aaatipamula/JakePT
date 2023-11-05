@@ -24,10 +24,11 @@
     }
     
   </script>
-  <div id="msg-container">
+  <div id="msg-container" class="messages">
+    <p>JakePT: Hi, How can I help you Today?</p>
   </div>
   <form id=chat-form onsubmit="onSubmit();return false">
-    <input id="chat-question" type="text" name="question">
+    <input id="chat-question" type="chat" name="question">
     <input id="chat-sumbit" type="submit" value="Submit">
   </form>
 {% endblock %}
